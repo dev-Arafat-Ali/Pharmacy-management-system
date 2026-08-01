@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./homePage.css">
+<link rel="stylesheet" href="./account.css">
+<title>OneTouch Pharmacy — Staff Portal</title>
+</head>
+<body class="account-body admin-body">
+
+<main class="account-main">
+  <div class="account-card admin-card">
+
+    <div class="admin-badge">🔒 Staff Portal</div>
+
+    <div class="auth-switch">
+      <button class="auth-btn active" data-mode="login">Log In</button>
+      <button class="auth-btn" data-mode="signup">Register</button>
+    </div>
+
+    <!-- ===== ADMIN LOGIN ===== -->
+    <form class="account-form" id="adminLoginForm" data-mode="login">
+      <h2>Admin Login</h2>
+      <p class="form-subtext">Restricted access — OneTouch Pharmacy staff only.</p>
+
+      <label for="adminLoginEmail">Staff Email</label>
+      <input type="email" id="adminLoginEmail" name="email" placeholder="staff@onetouchpharmacy.com" required>
+
+      <label for="adminLoginPassword">Password</label>
+      <input type="password" id="adminLoginPassword" name="password" placeholder="Enter your password" required>
+
+      <label for="adminLoginCode">Admin Code</label>
+      <input type="text" id="adminLoginCode" name="adminCode" placeholder="6-digit staff code" required>
+
+      <button type="submit" class="submit-btn admin-btn">Log In as Admin</button>
+    </form>
+
+    <!-- ===== ADMIN SIGN UP ===== -->
+    <form class="account-form hidden" id="adminSignupForm" data-mode="signup">
+      <h2>Register Staff Account</h2>
+      <p class="form-subtext">New admin accounts require an invite code from management.</p>
+
+      <label for="adminSignupName">Full name</label>
+      <input type="text" id="adminSignupName" name="fullName" placeholder="e.g. Dr. Yussif Braimah" required>
+
+      <label for="adminSignupEmail">Staff Email</label>
+      <input type="email" id="adminSignupEmail" name="email" placeholder="staff@onetouchpharmacy.com" required>
+
+      <label for="adminInvite">Invite Code</label>
+      <input type="text" id="adminInvite" name="inviteCode" placeholder="Provided by management" required>
+
+      <label for="adminSignupPassword">Password</label>
+      <input type="password" id="adminSignupPassword" name="password" placeholder="Create a password" required>
+
+      <label for="adminSignupConfirm">Confirm password</label>
+      <input type="password" id="adminSignupConfirm" name="confirmPassword" placeholder="Re-enter password" required>
+
+      <button type="submit" class="submit-btn admin-btn">Register Staff Account</button>
+    </form>
+
+    <p class="staff-link"><a href="./Account.html">← Back to customer login</a></p>
+
+  </div>
+</main>
+
+<script src="./account.js"></script>
+</body>
+</html>

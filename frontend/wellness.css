@@ -1,0 +1,237 @@
+/* ============================
+   SHARED PAGE-BANNER + ACTIVE LINK + CART BADGE
+   (same pattern used on shop.html / contact.css)
+   ============================ */
+.nav-ul2 a.active-link{
+    color: var(--btn-color);
+    border-bottom: 2px solid var(--btn-color);
+    padding-bottom: 4px;
+}
+.cart-icon-wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.cart-count{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: var(--btn-color);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+.page-banner{
+    background: #1a2e25;
+    padding: 160px 40px 60px;
+    text-align: left;
+}
+.breadcrumb{
+    color: rgba(255,255,255,0.55);
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+}
+.breadcrumb a{
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+}
+.breadcrumb a:hover{
+    color: var(--btn-color);
+}
+.breadcrumb .current-crumb{
+    color: var(--btn-color);
+    font-weight: 600;
+}
+.page-banner h1{
+    font-family: var(--hs-p-font-family);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: white;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.page-banner-desc{
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+/* ============================
+   TOOLBAR: search + category chips
+   ============================ */
+.articles-toolbar-section{
+    padding: 40px 40px 0;
+}
+.articles-search-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 8px;
+    padding: 12px 16px;
+    box-shadow: 0 3px 14px rgba(26,46,37,0.07);
+    max-width: 480px;
+    margin-bottom: 24px;
+}
+.articles-search-wrap img{
+    height: 18px;
+    opacity: 0.6;
+}
+.articles-search-wrap input{
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    width: 100%;
+}
+.article-filter-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.article-filter-btn{
+    background: white;
+    border: 1px solid rgba(26,46,37,0.12);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-family: var(--font-family);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #4a5a52;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+.article-filter-btn:hover{
+    background: #f3f9f6;
+}
+.article-filter-btn.active{
+    background: var(--btn-color);
+    border-color: var(--btn-color);
+    color: white;
+    font-weight: 600;
+}
+
+/* ============================
+   ARTICLE GRID (JS-rendered)
+   ============================ */
+.articles-grid-section{
+    padding: 30px 40px 80px;
+}
+.articles-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.articles-empty-state{
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7d75;
+    font-size: 0.95rem;
+}
+
+/* Reference card styling — your wellness.js should generate
+   cards using these class names so everything matches:
+   .article-card, .article-card img, .article-card-body,
+   .article-category-tag, .article-meta */
+.article-card{
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 14px rgba(26,46,37,0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.article-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(26,46,37,0.14);
+}
+.article-card img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+.article-card-body{
+    padding: 20px;
+}
+.article-category-tag{
+    display: inline-block;
+    background: #f3f9f6;
+    color: var(--btn-color);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.article-card h3{
+    font-family: var(--hs-p-font-family);
+    font-size: 1.05rem;
+    color: #1a2e25;
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+.article-card p{
+    font-size: 0.85rem;
+    color: #6b7d75;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+.article-meta{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #9aa8a1;
+    border-top: 1px solid rgba(26,46,37,0.08);
+    padding-top: 12px;
+}
+
+.articles-pagination{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+.articles-pagination:empty{
+    display: none;
+}
+
+/* ============================
+   Responsive
+   ============================ */
+@media (max-width: 900px){
+    .articles-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 560px){
+    .page-banner{
+        padding: 140px 24px 40px;
+    }
+    .articles-toolbar-section,
+    .articles-grid-section{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .articles-grid{
+        grid-template-columns: 1fr;
+    }
+    .article-filter-list{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 6px;
+    }
+}

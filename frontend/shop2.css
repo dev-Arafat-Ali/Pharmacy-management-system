@@ -1,0 +1,205 @@
+/* ============================
+   SHOP PAGE — page-specific styles
+   Relies on variables/fonts/nav/footer
+   already defined in homePage.css
+   ============================ */
+
+/* -- Active nav link -- */
+
+/* || vaiables||  */
+:root{
+--font-size: 19.2px;
+--background-color: whitesmoke;
+--color: white;
+
+}
+
+.nav-ul2 a.active-link{
+    color: var(--btn-color);
+    border-bottom: 2px solid var(--btn-color);
+    padding-bottom: 4px;
+}
+
+/* -- Cart count badge -- */
+.cart-icon-wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.cart-count{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    /* background: var(--btn-color); */
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+/* -- Shop banner -- */
+.shop-banner{
+    background: #1a2e25;
+    padding: 160px 40px 60px;
+    text-align: left;
+}
+
+.breadcrumb .current-crumb{
+    color: var(--btn-color);
+    font-weight: 600;
+}
+.shop-banner h1{
+    font-family: var(--hs-p-font-family);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: white;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.shop-banner-desc{
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+
+/* SEARCH BAR styles */
+.shop-toolbar{
+    display: flex;
+    align-items: center;
+    padding: 14px 40px;
+    margin-bottom: 10px;
+   margin-left:  258px;
+}
+.shop-search-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px 14px;
+    max-width: 480px;
+    width: 100%;
+    /* box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07); */
+    box-shadow: inset 3px -2px 17px 14px rgb(0 0 0 / 28%)
+}
+.shop-search-wrap img{
+    height: 18px;
+    opacity: 0.6;
+}
+.shop-search-wrap input{
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    width: 100%;
+}
+/* -- Sidebar -- */
+
+.shopLayout{
+    background-color: #ffffff46;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 40px;
+        margin: 10px 0;
+        margin-top: 5px;
+grid-template-columns: 260px 1fr;
+  
+        align-items: start;
+
+
+  
+}
+.sideBar{
+  margin-left: 8px;
+    background-color: rgba(165, 164, 164, 0.349);
+    border-radius: 14px;
+    padding: 24px 20px;
+    box-shadow: rgba(26, 46, 37, 0.07) 0px 3px 14px;
+    position: sticky;
+    top: 110px;
+    height: fit-content;
+    width: 100%;
+
+}
+    
+.products{
+  background-color: var(--background-color);
+    align-content: center;  
+    justify-content: center;
+      
+ }
+
+.sideBarHeading{
+    
+    font-size: 1rem;
+    color: #1a2e25;
+    margin:0 0 14px 10px;
+}
+.category-filter-btns{
+    list-style: none;
+    
+}
+.category-filter-btn{
+    
+margin-top: 5px; 
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 500;
+    color: green;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+}
+.allProducts{
+    font-size: inherit;
+    background: var(--btn-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+     width: 100%;
+    border: none;
+    padding: 7px;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+/* Sort styles */
+.shop-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* justify-content: space-between;  pushed apart */
+}
+
+#shopSortSelect {
+  font-family: 'Outfit', sans-serif;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--btn-color, #1a4d2e);
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--btn-color, #1a4d2e);
+  cursor: pointer;
+}
+
+#shopSortSelect:focus {
+  outline: none;
+  border-color: var(--btn-color, #1a4d2e);
+}
+
+/* -- Pagination (structure only, JS-controlled) -- */

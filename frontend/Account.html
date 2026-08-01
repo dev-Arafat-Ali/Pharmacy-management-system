@@ -1,25 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">~
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./homePage.css">
+<link rel="stylesheet" href="./account.css">
+<title>OneTouch Pharmacy — My Account</title>
 </head>
-<body>
-    <!-- ||signUP -->
-    <div>
-         <fieldset>
-    
-         sign UP
-        <form action="">
-  <input name="first_name" type="text">
-  <label for="first_name"></label>
-  <input name="first_name" type="text">
-  <label for="first_name"></label>
-  <input name="first_name" type="text">
-  <label for="first_name"></label>
-        </form>
-     </fieldset>
+<body class="account-body">
+
+<header>
+  <nav class="nav-bar">
+    <ul class="nav-ul1">
+      <li><a id="home" href="./homePage.html" target="blank">
+        <span class="logo-mark">OT</span>
+        <span class="oneTouch">OneTouch<br><small>Pharmacy LTD</small></span>
+      </a></li>
+    </ul>
+    <ul class="nav-ul2">
+      <li><a href="shop.html">Our Shop</a></li>
+      <li><a href="./Wellness-Articles.html" target="_parent">Wellness Articles</a></li>
+      <li><a href="./Contact-Us.html">Reach Us</a></li>
+    </ul>
+    <ul class="nav-ul3">
+      <li><img src="./images/search-outline.svg" style="height: 25px;" alt="search icon"></li>
+      <li><img src="./images/cart-outline.svg" style="height: 25px;" alt="cart icon"></li>
+      <li><a href="./Account.html"><img src="./images/person-sharp.svg" style="height: 25px;" alt="account icon"></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="account-main">
+  <div class="account-card">
+
+    <div class="auth-switch">
+      <button class="auth-btn active" data-mode="login">Log In</button>
+      <button class="auth-btn" data-mode="signup">Sign Up</button>
     </div>
+
+    <!-- LOGIN  -->
+    <form class="account-form" id="userLoginForm" data-mode="login">
+      <h2>Welcome back</h2>
+      <p class="form-subtext">Log in to track orders and manage your account.</p>
+
+      <label for="userLoginEmail">Email</label>
+      <input type="email" id="userLoginEmail" name="email" placeholder="you@example.com" required>
+
+      <label for="userLoginPassword">Password</label>
+      <input type="password" id="userLoginPassword" name="password" placeholder="Enter your password" required>
+
+      <button type="submit" class="submit-btn">Log In</button>
+      <p class="switch-hint">No account yet? <a href="#" class="switch-link" data-mode="signup">Sign up</a></p>
+    </form>
+
+    <!--- SIGN UP  -->
+    <form class="account-form hidden" id="userSignupForm" data-mode="signup">
+      <h2>Create your account</h2>
+      <p class="form-subtext">Sign up to start ordering genuine medicines.</p>
+
+      <label for="userSignupName">Full name</label>
+      <input type="text" id="userSignupName" name="fullName" placeholder="e.g. Amina Konlan" required>
+
+      <label for="userSignupEmail">Email</label>
+      <input type="email" id="userSignupEmail" name="email" placeholder="you@example.com" required>
+
+      <label for="userSignupPhone">Phone number</label>
+      <input type="tel" id="userSignupPhone" name="phone" placeholder="+233 5X XXX XXXX" required>
+
+      <label for="userSignupPassword">Password</label>
+      <input type="password" id="userSignupPassword" name="password" placeholder="Create a password" required>
+
+      <label for="userSignupConfirm">Confirm password</label>
+      <input type="password" id="userSignupConfirm" name="confirmPassword" placeholder="Re-enter password" required>
+
+      <button type="submit" class="submit-btn">Create Account</button>
+      <p class="switch-hint">Already have an account? <a href="#" class="switch-link" data-mode="login">Log in</a></p>
+    </form>
+   <!-- STAFF LOGIN PAGE -->
+    <!-- <p class="staff-link"><a href="./Admin-Login.html">Staff member? Log in here →</a></p>
+
+  </div> -->
+</main>
+
+<footer class="footer-darkgreen">
+  <div class="footer-container" style="grid-template-columns: 1fr;">
+    <div class="social-links">
+      <strong class="f-brand">ONE TOUCH PHARMACY</strong>
+      <p class="f-description">Your trusted online pharmacy in Northern Ghana.</p>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="copyRights">&copy; One Touch Pharmacy LTD. <span class="date">2026</span> All rights reserved.</div>
+</footer>
+
+<script src="./account.js"></script>
 </body>
 </html>

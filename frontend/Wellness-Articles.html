@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./homePage.css">
+  <link rel="stylesheet" href="./wellness.css">
+  <title>Wellness Articles | OneTouch Pharmacy</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar">
+      <ul class="nav-ul1">
+        <li><a id="home" href="./homePage.html" target="_self">
+          <span class="logo-mark">OT</span>
+          <span class="oneTouch">OneTouch<br><small>Pharmacy LTD</small></span>
+        </a></li>
+      </ul>
+      <ul class="nav-ul2">
+        <li><a href="./shop2.html">Our Shop</a></li>
+        <li><a href="./Wellness-Articles.html" class="active-link">Wellness Articles</a></li>
+        <li><a href="./Contact-Us.html">Reach Us</a></li>
+      </ul>
+      <ul class="nav-ul3">
+        <li><img src="./images/search-outline.svg" style="height: 25px;" alt="search icon"></li>
+        <li class="cart-icon-wrap">
+          <img src="./images/cart-outline.svg" style="height: 25px;" alt="cart icon">
+          <span class="cart-count" id="cartCount">0</span>
+        </li>
+        <li><a href="./Account.html"><img src="./images/person-sharp.svg" style="height: 25px;" alt="account icon"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="page-banner-content">
+        <p class="breadcrumb"><a href="./homePage.html">Home</a> <span>/</span> <span class="current-crumb">Wellness Articles</span></p>
+        <h1>Wellness Articles</h1>
+        <p class="page-banner-desc">Practical health tips, disease prevention, and wellness guidance for families across Northern Ghana.</p>
+      </div>
+    </section>
+
+    <section class="articles-toolbar-section">
+      <div class="articles-search-wrap">
+        <img src="./images/search-outline.svg" alt="search icon">
+        <input type="search" id="articleSearchInput" placeholder="Search articles...">
+      </div>
+      <ul class="article-filter-list" id="articleFilterList">
+        <li><button class="article-filter-btn active" data-category="all">All</button></li>
+        <li><button class="article-filter-btn" data-category="nutrition">Nutrition</button></li>
+        <li><button class="article-filter-btn" data-category="disease-prevention">Disease Prevention</button></li>
+        <li><button class="article-filter-btn" data-category="maternal-child">Maternal & Child Health</button></li>
+        <li><button class="article-filter-btn" data-category="mental-wellness">Mental Wellness</button></li>
+        <li><button class="article-filter-btn" data-category="seasonal-health">Seasonal Health</button></li>
+      </ul>
+    </section>
+
+    <!--
+      Article cards are rendered here dynamically by wellness.js
+      (array of article objects looped into .article-card markup),
+      same pattern as the product grid on shop.html.
+    -->
+    <section class="articles-grid-section">
+      <div class="articles-grid" id="articlesGrid">
+        <p class="articles-empty-state" id="articlesEmptyState">Loading articles...</p>
+      </div>
+      <div class="articles-pagination" id="articlesPagination"></div>
+    </section>
+  </main>
+
+  <footer class="footer-darkgreen">
+    <div class="footer-container">
+      <div class="social-links">
+        <strong class="f-brand">ONE TOUCH PHARMACY</strong>
+        <p class="f-description">Your trusted online pharmacy in Northern Ghana. Quality medicines, fast delivery, expert care</p>
+        <div class="social2">
+          <img src="./images/logo-facebook.svg" alt="facebook">
+          <img src="./images/logo-instagram.svg" alt="instagram">
+          <img src="./images/logo-linkedin.svg" alt="linkedIn">
+        </div>
+      </div>
+      <div class="f-contents">
+        <div class="quick-links">
+          <h4>Quick Links</h4>
+          <a href="./homePage.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./Wellness-Articles.html">Wellness Articles</a>
+          <a href="./Contact-Us.html">Contact Us</a>
+        </div>
+        <div class="quick-links">
+          <h4>Categories</h4>
+          <a href="./shop.html" class="f-Categories" data-category="pain-relief">Pain Relief</a>
+          <a href="./shop.html" class="f-Categories" data-category="vitamins">Vitamins</a>
+          <a href="./shop.html" class="f-Categories" data-category="malaria">Cold & flu</a>
+          <a href="./shop.html" class="f-Categories" data-category="malaria">Malaria Treatment</a>
+        </div>
+        <div class="quick-links">
+          <h4>Contacts</h4>
+          <div class="contacts-style">
+            <img src="./images/send.svg" alt="location">
+            <a href="http://" target="_blank" rel="noopener noreferrer">Nasuan, North-East Region</a>
+          </div>
+          <div class="contacts-style">
+            <img src="./images/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="call">
+            <a href="tel:+233561233554">+233 56 123 3554</a>
+          </div>
+          <div class="contacts-style">
+            <img src="./images/sms_message.svg" alt="email">
+            <a href="mailto:ngualaarafat47@gmail.com">ngualaarafat47@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="copyRights">&copy; One Touch Pharmacy LTD. <span class="date">2026</span> All rights reserved.</div>
+    <div class="footer-divider"></div>
+  </footer>
+
+  <script src="./wellness.js"></script>
+</body>
+</html>

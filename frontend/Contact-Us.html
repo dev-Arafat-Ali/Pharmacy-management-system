@@ -1,11 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./homePage.css">
+  <link rel="stylesheet" href="./contact.css">
+  <title>Contact Us | OneTouch Pharmacy</title>
 </head>
+
 <body>
-    adfdsdf
+  <header>
+    <nav class="nav-bar">
+      <ul class="nav-ul1">
+        <li><a id="home" href="./homePage.html" target="_self">
+          <span class="logo-mark">OT</span>
+          <span class="oneTouch">OneTouch<br><small>Pharmacy LTD</small></span>
+        </a></li>
+      </ul>
+      <ul class="nav-ul2">
+        <li><a href="shop2.html">Our Shop</a></li>
+        <li><a href="./Wellness-Articles.html">Wellness Articles</a></li>
+        <li><a href="./Contact-Us.html" class="active-link">Reach Us</a></li>
+      </ul>
+      <ul class="nav-ul3">
+        <li><img src="./images/search-outline.svg" style="height: 25px;" alt="search icon"></li>
+        <li class="cart-icon-wrap">
+          <img src="./images/cart-outline.svg" style="height: 25px;" alt="cart icon">
+          <span class="cart-count" id="cartCount">0</span>
+        </li>
+        <li><a href="./Account.html"><img src="./images/person-sharp.svg" style="height: 25px;" alt="account icon"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="page-banner-content">
+        <p class="breadcrumb"><a href="./homePage.html">Home</a> <span>/</span> <span class="current-crumb">Contact Us</span></p>
+        <h1>Get In Touch</h1>
+        <p class="page-banner-desc">Questions about an order, a medication, or just want advice? Our team and pharmacists are here to help.</p>
+      </div>
+    </section>
+
+    <section class="contact-layout">
+      <div class="contact-form-card">
+        <h3>Send Us a Message</h3>
+        <p class="form-subtext">We usually reply within a few hours during business hours.</p>
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full name</label>
+              <input type="text" id="contactName" name="contactName" placeholder="e.g. Ibrahim M." required>
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone number</label>
+              <input type="tel" id="contactPhone" name="contactPhone" placeholder="e.g. 024 123 4567">
+            </div>
+          </div>
+
+          <label for="contactEmail">Email address</label>
+          <input type="email" id="contactEmail" name="contactEmail" placeholder="you@example.com" required>
+
+          <label for="contactSubject">Subject</label>
+          <select id="contactSubject" name="contactSubject">
+            <option value="general">General Inquiry</option>
+            <option value="order">Order Support</option>
+            <option value="pharmacist">Talk to a Pharmacist</option>
+            <option value="feedback">Feedback</option>
+          </select>
+
+          <label for="contactMessage">Your message</label>
+          <textarea id="contactMessage" name="contactMessage" placeholder="Tell us how we can help..." required></textarea>
+
+          <p class="form-status" id="contactFormStatus"></p>
+
+          <button type="submit" class="contact-submit-btn">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info-column">
+        <div class="contact-info-card">
+          <h3>Contact Information</h3>
+          <div class="contacts-style-light">
+            <img src="./images/send.svg" alt="location icon">
+            <div>
+              <strong>Our Location</strong>
+              <p>Nasuan, North-East Region, Ghana</p>
+            </div>
+          </div>
+          <div class="contacts-style-light">
+            <img src="./images/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="call icon">
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+233561233554">+233 56 123 3554</a></p>
+            </div>
+          </div>
+          <div class="contacts-style-light">
+            <img src="./images/sms_message.svg" alt="email icon">
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:ngualaarafat47@gmail.com">ngualaarafat47@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-hours-card">
+          <h3>Business Hours</h3>
+          <ul class="hours-list">
+            <li><span>Monday – Friday</span><span>8:00 AM – 8:00 PM</span></li>
+            <li><span>Saturday</span><span>9:00 AM – 6:00 PM</span></li>
+            <li><span>Sunday</span><span>10:00 AM – 4:00 PM</span></li>
+          </ul>
+        </div>
+
+        <div class="contact-map-placeholder" id="contactMap">
+          <p>Map will be added here</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-darkgreen">
+    <div class="footer-container">
+      <div class="social-links">
+        <strong class="f-brand">ONE TOUCH PHARMACY</strong>
+        <p class="f-description">Your trusted online pharmacy in Northern Ghana. Quality medicines, fast delivery, expert care</p>
+        <div class="social2">
+          <img src="./images/logo-facebook.svg" alt="facebook">
+          <img src="./images/logo-instagram.svg" alt="instagram">
+          <img src="./images/logo-linkedin.svg" alt="linkedIn">
+        </div>
+      </div>
+      <div class="f-contents">
+        <div class="quick-links">
+          <h4>Quick Links</h4>
+          <a href="./homePage.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./Wellness-Articles.html">Wellness Articles</a>
+          <a href="./Contact-Us.html">Contact Us</a>
+        </div>
+        <div class="quick-links">
+          <h4>Categories</h4>
+          <a href="./shop.html" class="f-Categories" data-category="pain-relief">Pain Relief</a>
+          <a href="./shop.html" class="f-Categories" data-category="vitamins">Vitamins</a>
+          <a href="./shop.html" class="f-Categories" data-category="malaria">Cold & flu</a>
+          <a href="./shop.html" class="f-Categories" data-category="malaria">Malaria Treatment</a>
+        </div>
+        <div class="quick-links">
+          <h4>Contacts</h4>
+          <div class="contacts-style">
+            <img src="./images/send.svg" alt="location">
+            <a href="http://" target="_blank" rel="noopener noreferrer">Nasuan, North-East Region</a>
+          </div>
+          <div class="contacts-style">
+            <img src="./images/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="call">
+            <a href="tel:+233561233554">+233 56 123 3554</a>
+          </div>
+          <div class="contacts-style">
+            <img src="./images/sms_message.svg" alt="email">
+            <a href="mailto:ngualaarafat47@gmail.com">ngualaarafat47@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="copyRights">&copy; One Touch Pharmacy LTD. <span class="date">2026</span> All rights reserved.</div>
+    <div class="footer-divider"></div>
+  </footer>
+
+  <script src="./contact.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./homepage.css">
+  <link rel="stylesheet" href="./homePage.css">
   <title>OneTouch Pharmacy</title>
 </head>
 
@@ -12,143 +12,322 @@
   <header>
     <nav class="nav-bar">
       <ul class="nav-ul1">
-        <li><a href="./homePage.html" target="_self" rel=""><img src="./images/pharmacyLogo.png" alt="OneTouch Pharmacy logo"
-              ></a></li>
-        <li><a href="./homePage.html" target="_self"> <strong class="oneTouch">OneTouch</strong> <small>Pharmacy
-              LTD</small> </a></li>
+        <li><a id="home" href="./homePage.html" target="_self">
+          <span class="logo-mark">OT</span>
+          <span class="oneTouch">OneTouch<br><small>Pharmacy LTD</small></span>
+        </a></li>
       </ul>
       <ul class="nav-ul2">
-         <li><a href="shop.html">Our Shop</a></li>
-
-        <!-- <li><a href="./Health-Blog" target="_self">Health Blog</a></li> -->
-        <li><a href="./Store-Locator" target="_parent"> Wellness Articles</a></li>
+        <li><a href="./shop2.html">Our Shop</a></li>
+        <li><a href="./Wellness-Articles.html" target="_parent">Wellness Articles</a></li>
         <li><a href="./Contact-Us.html">Reach Us</a></li>
       </ul>
       <ul class="nav-ul3">
-        <li><img src="./images/search-outline.svg" style="height: 25px;" alt="cart-image"></li>
-        <li> <img src="./images/cart-outline.svg" style="height: 25px;" alt="cart-image"></li>
-        <li><a href="./Account.html"><img src="./images/person-sharp.svg" style="height: 25px;" alt="cart-image"></a></li>
+        <li><img src="./images/search-outline.svg" style="height: 25px;" alt="search icon"></li>
+        <li><img src="./images/cart-outline.svg" style="height: 25px;" alt="cart icon"></li>
+        <li><a href="./Account.html"><img src="./images/person-sharp.svg" style="height: 25px;" alt="account icon"></a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section class="hero">
-      <div class="hero-section1-div1">
-       <p class="hero-tagline">Your health,Our priority</p>
-       <h1>Your Trusted Pharmacy <b class="light-blue"> <br>Right at Your </b>  Fingertips</h1>
-       <p class="hero-desc">OneTouch Pharmacy brings genuine, quality-assured medicines directly 
-to you in Northern Ghana. No stress, no long queues — just reliable 
-healthcare, one touch away. We work with certified suppliers to ensure 
-every product on our shelves is safe, genuine and effective. 
-Because when it comes to your health, there is no room for compromise.</p>
-        <button class="homepage-button"><a href="./shop">Shop Now</a></button>
-      
-        <button class="homepage-button2"><a href="./about">Learn More</a></button>
+      <div class="hero-slider-bg">
+        <img src="./images/Nurse_Patient_Education.jfif" alt="Nurse Patient Education" class="slide active">
+        <img src="./images/nurrse_patient2.jfif" alt="Nurse and Patient seating" class="slide">
+        <img src="./images/man-with-painful-stomach.jfif" alt="a man with painful stomach" class="slide">
+        <img src="./images/knowing_the_patient_prob.jfif" alt="knowing the patient problem" class="slide">
+        <div class="hero-overlay"></div>
       </div>
-     
-      <div class="hero-slider">
-        <div class="image-group">
-           <img src="./images/Nurse Patient Education.jfif" alt="Nurse Patient Education"  class="slide active">
-          
-           <img src="./images/nurrse patient2.jfif" alt="Nurse and Patient seating" class="slide" >
-          
-           <img src="./images/man-with-painful-stomach.jfif" alt="a man-with-painful-stomach" class="slide" >
-          
-           <img src="./images/knowing the patient prob.jfif" alt="knowing the patient problem"  class="slide">
-          
-          <div class="slider-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-         
+
+      <div class="hero-floating-text">
+        <p class="hero-tagline">Open now · Northern Ghana</p>
+        <h1>Genuine Medicine,<br><b class="light-blue">One Touch</b> Away</h1>
+        <p class="hero-desc">OneTouch Pharmacy brings genuine, quality-assured medicines directly
+          to you in Northern Ghana. No stress, no long queues — just reliable
+          healthcare, one touch away.</p>
+        <div class="hero-btn-row">
+          <button class="homepage-button"><a href="./shop.html">Shop Now</a></button>
+          <button class="homepage-button2"><a href="./Contact-Us.html">Talk to a Pharmacist</a></button>
         </div>
       </div>
+
+      <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="scroll-cue">↓ Scroll</div>
     </section>
-     <hr class="trust-hr">
-     <div class="trust-bar">
-                <div class="trust-bar-items">
 
-                  <img src="./images/check_box_2.svg" alt="check-box icon">
+    <div class="news-ticker nav2">
+      <span class="ticker-label">Health Watch</span>
+      <div class="ticker-track">
+          <span>🩺 New stock arrived: Vitamin D3 now available</span>
+          <span>💊 Flu season alert — stock up on Cold & Flu relief</span>
+          <span>🚚 Free delivery on orders over GHS 100</span>
+      </div>
+    </div>
 
-                  <div> <strong class="strong-trust">Genuine Medicines</strong>
-                    <small class="small-trust">100% verified suppliers</small>
-                  </div>
+    <hr class="trust-hr">
+    <div class="trust-bar">
+      <div class="trust-bar-items">
+        <img src="./images/check_box_2.svg" alt="check-box icon">
+        <div> <strong class="strong-trust">Genuine Medicines</strong>
+          <small class="small-trust">100% verified suppliers</small>
+        </div>
+      </div>
+      <div class="trust-bar-items">
+        <img src="./images/local_shipp.svg" alt="delivery icon">
+        <div> <strong class="strong-trust">Fast Delivery</strong>
+          <small class="small-trust">Right to your door</small>
+        </div>
+      </div>
+      <div class="trust-bar-items">
+        <img src="./images/sms_message.svg" alt="message icon">
+        <div> <strong class="strong-trust">Expert Support</strong>
+          <small class="small-trust">Talk to a pharmacist</small>
+        </div>
+      </div>
+      <div class="trust-bar-items">
+        <img src="./images/paid_24dpsvg.svg" alt="paid icon">
+        <div> <strong class="strong-trust">Affordable Prices</strong>
+          <small class="small-trust">Best deals in northern Ghana</small>
+        </div>
+      </div>
+    </div>
 
-                </div>
-                <div class="trust-bar-items">
-                  <img src="./images/local_shipp.svg" alt="car-icon">
+    <div class="container-strips">
+      <div class="category-item"><span>💊</span><p>Pain Relief</p></div>
+      <div class="category-item"><span>🦟</span><p>Malaria</p></div>
+      <div class="category-item"><span>🌿</span><p>Vitamins</p></div>
+      <div class="category-item"><span>🩹</span><p>First Aid</p></div>
+      <div class="category-item"><span>👶</span><p>Baby Care</p></div>
+      <div class="category-item"><span>❤️</span><p>Skin Care</p></div>
+    </div>
 
-                  <div> <strong class="strong-trust">Fast Delivery</strong>
-                    <small class="small-trust">Right to your door</small>
-                  </div>
-
-                </div>
-                <div class="trust-bar-items">
-                  <img src="./images/sms_message.svg" alt="message-icon">
-
-                  <div> <strong class="strong-trust">Expert Support</strong>
-                    <small class="small-trust">Talk to a pharmacist</small>
-                  </div>
-
-                </div>
-                <div class="trust-bar-items">
-                  <img src="./images/paid_24dpsvg.svg" alt="paid icon">
-                  
-                  <div> <strong class="strong-trust">Affordable Prices</strong>
-                      <small class="small-trust">Best deals in northern Ghana</small>
-                  </div>
-                </div>
-     </div>
     <section class="main-section2">
       <div class="section2-header">
-        <h2>What We Offer</h2>
+        <h2>Browse Products</h2>
         <a href="./shop.html">View All &rarr;</a>
       </div>
       <div class="products">
-              <div class="product-cart">
-                <img src="./images/Badge_Medicine1.webp" alt="">
-                <div class="product-info">
-                  <h4>Paracetamol 500mg</h4>
-                  <span class="price">Ghs 5</span>
-                </div>
-                <button class="add-cart">&plus; Add to cart</button>
-              </div>
+        <div class="product-card">
+          <div class="badge new" >HOT</div>
+          <img src="./images/med1.jpg" alt="paracetamol tablets">
+          <div class="product-info">
+            <h4>Paracetamol 50mg</h4>
+            <span class="price">Ghs 5</span>
+          </div>
+          <button data-id="1" class="add-cart">&plus; Add to cart</button>
+        </div>
+        <div class="product-card">
+          <div class="badge">HOT</div>
+          <img src="./images/med2.jpg" alt="atenolol">
+          <div class="product-info">
+            <h4>Atenolol 25mg</h4>
+            <span class="price">Ghs 15</span>
+          </div>
+          <button data-id="2" class="add-cart">&plus; Add to cart</button>
+        </div>
+        <div class="product-card">
+          <div class="badge">HOT</div>
+          <img src="./images/med3.jpg" alt="nitromin spray">
+          <div class="product-info">
+            <h4>Nitromin Spray 4mg</h4>
+            <span class="price">Ghs 21</span>
+            <del class="price deleted">Ghs 25</del>
+          </div>
+          <button data-id="3" class="add-cart">&plus; Add to cart</button>
+        </div>
+        <div class="product-card">
+          <div class="badge">HOT</div>
+          <img src="./images/med4.jpg" alt="clarithromycin">
+          <div class="product-info">
+            <h4>Clarithromycin 500mg</h4>
+            <span class="price">Ghs 13</span>
+          </div>
+          <button data-id="4" class="add-cart">&plus; Add to cart</button>
+        </div>
+        <div class="product-card">
+          <div class="badge new" >New</div>
+          <img src="./images/med5_amoxilini.jpg" alt="amoxicillin">
+          <div class="product-info hover-card">
+            <h4>Amoxicillin 500mg</h4>
+            <span class="price">Ghs 5</span>
+          </div>
+          <button data-id="5" class="add-cart hover-card">&plus; Add to cart</button>
+        </div>
+        <div class="product-card">
+          <div class="badge new">New</div>
+          <img src="./images/med6.jpg" alt="citalopram">
+          <div class="product-info hover-card">
+            <h4>Citalopram 20mg</h4>
+            <span class="price">Ghs 9</span>
+          </div>
+          <button data-id="6" class="add-cart hover-card">&plus; Add to cart</button>
+        </div>
+        <div class="product-card">
+          <div class="badge new"  >New</div>
+          <img src="./images/med7_Naproxen.jpg" alt="naproxen">
+          <div class="product-info hover-card">
+            <h4>Naproxen 250mg</h4>
+            <span class="price">Ghs 35</span>
+          </div>
+          <button data-id="7" class="add-cart hover-card">&plus; Add to cart</button>
+        </div>
+        <div class="product-card">
+          <div class="badge new">New</div>
+          <img src="./images/med8_inrupofen.jpg" alt="ibuprofen">
+          <div class="product-info hover-card">
+            <h4>Ibuprofen 200mg</h4>
+            <span class="price">Ghs 35</span>
+          </div>
+          <button data-id="8" class="add-cart hover-card">&plus; Add to cart</button>
+        </div>
       </div>
-    
     </section>
 
+    <section class="why-choose">
+      <div class="why-image">
+        <div class="img-placeholder"><img src="./images/Professional_Pharmacist_.jfif" alt="professional pharmacist"></div>
+      </div>
+      <div class="why-content">
+        <p class="section-tagline">Why Choose Us</p>
+        <h2>Healthcare You Can <span>Trust</span></h2>
+        <div class="why-point">
+          <span class="why-icon">✅</span>
+          <div>
+            <h4>Certified Pharmacists</h4>
+            <p>Every order is checked by licensed professionals.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <span class="why-icon">🚀</span>
+          <div>
+            <h4>Fast & Reliable Delivery</h4>
+            <p>Quick delivery across Northern Ghana, every time.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <span class="why-icon">🔒</span>
+          <div>
+            <h4>Safe & Confidential</h4>
+            <p>Your health information stays private with us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    
+    <section class="testimonials">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Real experiences from people across Northern Ghana</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Getting my medications has never been this easy. Fast delivery and friendly staff!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div><strong>Amina K.</strong><small>Tamale</small></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Affordable prices and genuine medicine — exactly what we needed nearby.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">Y</div>
+            <div><strong>Yussif B.</strong><small>Tamale</small></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★☆</div>
+          <p class="testimonial-text">The pharmacist actually called to confirm my order. That kind of care matters.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">F</div>
+            <div><strong>Fatima A.</strong><small>Savelugu</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section">
+      <div class="review-card">
+        <h3>Leave a Review</h3>
+        <p class="form-subtext">Tell other customers about your experience with OneTouch.</p>
+        <form id="reviewForm" class="review-form">
+          <label for="reviewerName">Your name</label>
+          <input type="text" id="reviewerName" placeholder="e.g. Mariam S." required>
+
+          <label>Your rating</label>
+          <div class="star-rating" data-rating="0">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+
+          <label for="reviewText">Your review</label>
+          <textarea id="reviewText" placeholder="Tell us about your experience..." required></textarea>
+
+          <button type="submit" class="review-submit-btn">Submit Review</button>
+        </form>
+      </div>
+    </section>
   </main>
 
+  <footer class="footer-darkgreen">
+    <div class="footer-container">
+      <div class="social-links">
+        <strong class="f-brand">ONE TOUCH PHARMACY</strong>
+        <p class="f-description">Your trusted online pharmacy in Northern Ghana. Quality medicines, fast delivery, expert care</p>
+        <div class="social2">
+          <img src="./images/logo-facebook.svg" alt="facebook">
+          <img src="./images/logo-instagram.svg" alt="instagram">
+          <img src="./images/logo-linkedin.svg" alt="linkedIn">
+        </div>
+      </div>
+      <div class="f-contents">
+        <div class="quick-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./">Wellness Articles</a>
+          <a href="./Contact-Us.html">Contact Us</a>
+        </div>
+        <div class="quick-links">
+          <h4>Categories</h4>
+          <a href="./shop.html" class="f-Categories">Pain Relief</a>
+          <a href="./shop.html" class="f-Categories">Vitamins</a>
+          <a href="./shop.html" class="f-Categories">Cold & flu</a>
+          <a href="./shop.html" class="f-Categories">Malaria Treatment</a>
+        </div>
+        <div class="quick-links">
+          <h4>Contacts</h4>
+          <div class="contacts-style">
+            <img src="./images/send.svg" alt="location">
+            <a href="http://" target="_blank" rel="noopener noreferrer">Nasuan, North-East Region</a>
+          </div>
+          <div class="contacts-style">
+            <img src="./images/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="call">
+            <a href="tel:+233561233554">+233 56 123 3554</a>
+          </div>
+          <div class="contacts-style">
+            <img src="./images/sms_message.svg" alt="email">
+            <a href="mailto:ngualaarafat47@gmail.com">ngualaarafat47@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="copyRights">&copy; One Touch Pharmacy LTD. <span class="date">2026</span> All rights reserved.</div>
+    <div class="footer-divider"></div>
+  </footer>
 
-  <!-- <input class="btn"type="text" id="text">
-    <button  class="btn" onclick="speechSynthesis.speak(new SpeechSynthesisUtterance (text.value))"><img src="./images/mic-outline.svg" alt=""></button> -->
-  <!-- <script src="./homepage.js">
-    
-  </script> -->
-   
-
-  
+  <script src="./homepage.js"></script>
 </body>
- <script>
-           const slides = document.querySelectorAll('.slide');
-           const dots = document.querySelectorAll('.dot');
-           let current = 0;
-            setInterval(()=> {
-           slides[current].classList.remove('active');
-           dots[current].classList.remove('active');
-           
-           current  = (current+1)% slides.length;
-
-           slides[current].classList.add('active');
-           dots[current].classList.add('active');
-            } , 3000);
-
-
-            
-    </script>
-
 </html>
