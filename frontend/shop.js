@@ -38,7 +38,7 @@
   const priceRange        = document.getElementById("priceRange");
   const priceRangeValue   = document.getElementById("priceRangeValue");
   const resultsCount      = document.getElementById("resultsCount");
-  const cartCount         = document.getElementById("cartCount");
+ 
 
 
   // 3. RENDER FUNCTION
@@ -106,49 +106,41 @@ sortSelect.addEventListener("change",()=>{
   displayProducts(products)
 })
 
-// Add to cart
+// ADD TO CART   // the first parameter in the reduce function takes 2 arg, the 1st is the running total & 2nd is the current item
+let cart = JSON.parse(localStorage.getItem("cart"))|| [];
+
+const cartCount = document.getElementById("cartCount");
+
+ 
+   
+   function updateCart(){
+   localStorage.setItem("cart",JSON.stringify(cart))
+
+   const totalCount = cart.reduce((sum,item)=> sum + item.quantity,0)
+
+     cartCount.textContent = totalCount
+ }
+
 productsGrid.addEventListener("click",(e)=>{
   if(e.target.classList.contains("add-cart")){
     const productId = Number(e.target.dataset.id)
     const product = products.find(item=>item.id===productId)
-    console.log(product);
     
+    const existAlready = cart.find(item=> item.id===productId)
+  if(existAlready){
+    existAlready.quantity += 1
     
-  }
-  
-})
+  }else
+    {
+    cart.push({
+      id:product.id,
+      name:product.name,
+      price:product.price,
+      quantity:1
+    })
+  } 
 
+updateCart()
 
-
-
-
-  // -----------------------------------------------------------
-  // 4. FILTERING
-  // ----------------------------------------------
-  
-  // TODO: Category buttons -> filter products array by data-category
-  // TODO: Search input -> filter products array by name match
-  // TODO: Price range -> filter products array by max price
-  // TODO: Combine all active filters, then call your render function
-
-  // -----------------------------------------------------------
-
-  // -----------------------------------------------------------
-  // TODO: sortSelect change event -> sort the (filtered) array by
-  // price-low, price-high, or name, then re-render
-
-
-  // -----------------------------------------------------------
-  // 6. CART (localStorage)
-  // -----------------------------------------------------------
-  // TODO: "Add to cart" button click -> push/update item in a cart
-  // array, save with localStorage.setItem (JSON.stringify)
-  // TODO: On page load -> localStorage.getItem + JSON.parse to
-  // restore cart and update #cartCount
-
-
-  // -----------------------------------------------------------
-  // 7. INIT
-  // -----------------------------------------------------------
-  // TODO: Call your render function once on page load with the
-  // full products array
+}})
+updateCart()
