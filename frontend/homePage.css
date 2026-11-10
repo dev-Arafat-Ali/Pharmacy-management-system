@@ -561,7 +561,12 @@ object-fit: cover;
 
 .why-image, .why-content{
     flex: 1;
-    min-width: 300px;
+    min-width: 100px;
+   
+}
+.why-image{
+     height: 10%;
+    width: 10%;
 }
 
 .section-tagline{

@@ -111,6 +111,7 @@ let cart = JSON.parse(localStorage.getItem("cart"))|| [];
 
 const cartCount = document.getElementById("cartCount");
 
+ console.log((cartCount));
  
    
    function updateCart(){
@@ -144,3 +145,7 @@ updateCart()
 
 }})
 updateCart()
+console.log(localStorage);
+localStorage.removeItem("cart")
+
+console.log(localStorage);
