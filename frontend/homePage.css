@@ -10,7 +10,6 @@ body{
     background-color: var(--color);
     font-family:var(--font-family);
     font-size: 1.2rem;
-       height: 100vh;
        width: 100%;
 
 }
@@ -907,4 +906,141 @@ font-family: var(--hs-p-font-family);
     .f-contents{
         grid-template-columns: 1fr 1fr;
     }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+/* Hamburger (hidden on desktop) */
+.hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger span{
+    display: block;
+    height: 2.5px;
+    width: 100%;
+    background: #1a2e25;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.hamburger.active span:nth-child(1){ transform: translateY(7.5px) rotate(45deg); }
+.hamburger.active span:nth-child(2){ opacity: 0; }
+.hamburger.active span:nth-child(3){ transform: translateY(-7.5px) rotate(-45deg); }
+
+/* Make the whole button clickable, not just the link text */
+.homepage-button a,
+.homepage-button2 a{
+    display: block;
+    padding: 15px 32px;
+    margin: -15px -32px;
+}
+
+/* Touch screens can't hover, so never hide product info/buttons */
+@media (hover: none){
+    .product-info.hover-card,
+    .hover-card.add-cart{ opacity: 1; }
+}
+
+/* ---------- Small laptops ---------- */
+@media (max-width: 1100px){
+    .nav-ul2{ gap: 22px; }
+}
+
+/* ---------- Tablets and below ---------- */
+@media (max-width: 900px){
+    /* nav */
+    nav.nav-bar{
+        width: calc(100% - 20px);
+        margin: 10px;
+        padding: 10px 16px;
+        grid-template-columns: 1fr auto auto;
+        column-gap: 12px;
+    }
+    .nav-ul1{ grid-column: 1; grid-row: 1; }
+    .nav-ul3{ grid-column: 2; grid-row: 1; gap: 14px; }
+    .hamburger{ display: flex; grid-column: 3; grid-row: 1; }
+    .nav-ul2{
+        display: none;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        flex-direction: column;
+        gap: 0;
+        justify-self: stretch;
+        margin-top: 10px;
+        border-top: 1px solid rgba(26,46,37,0.12);
+    }
+    .nav-ul2.open{ display: flex; }
+    .nav-ul2 a{ display: block; padding: 14px 4px; }
+
+    /* sections */
+    .trust-bar{ grid-template-columns: 1fr 1fr; padding: 28px 20px; }
+    .products{ grid-template-columns: repeat(2, 1fr); }
+    .product-card img{ height: 240px; }
+    .testimonials-grid{ grid-template-columns: 1fr; }
+    .why-choose{ padding: 60px 24px; gap: 30px; }
+    .why-image, .why-content{ flex: 1 1 100%; }
+    .why-image{ height: auto; width: auto; }
+    .why-image .img-placeholder img{ height: 300px; }
+    .testimonials{ padding: 60px 24px; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 768px){
+    .hero{ height: 100vh; height: 100svh; min-height: 560px; }
+    .hero-floating-text{ padding: 90px 20px 70px; }
+    .hero-floating-text h1{ font-size: 2.2rem; }
+    .scroll-cue{ display: none; }
+
+    .nav2{ margin: 24px 0 5px; }
+
+    .container-strips{ grid-template-columns: repeat(3, 1fr); padding: 24px 16px; gap: 10px; }
+    .category-item{ padding: 16px 8px; }
+
+    .main-section2{ padding: 0 16px; }
+    .section2-header{ padding: 0; }
+    .products{ padding: 0; gap: 14px; }
+    .product-card{ margin: 10px 0; }
+
+    .why-content h2,
+    .testimonials .section-header h2{ font-size: 1.7rem; }
+
+    .review-section{ padding: 40px 16px; }
+    .review-card{ padding: 26px 20px; }
+    /* 16px stops iOS zooming in when you tap an input */
+    .review-form input,
+    .review-form textarea{ font-size: 16px; }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px){
+    nav.nav-bar{ padding: 8px 10px; column-gap: 8px; }
+    .logo-mark{ width: 38px; height: 38px; font-size: 0.95rem; }
+    .oneTouch{ font-size: 0.95rem; }
+    .nav-ul3{ gap: 12px; }
+
+    .hero-btn-row{ flex-direction: column; width: 100%; gap: 12px; }
+    .hero-btn-row .homepage-button,
+    .hero-btn-row .homepage-button2{ width: 100%; }
+
+    .trust-bar{ grid-template-columns: 1fr; }
+    .product-card img{ height: 170px; }
+
+    .footer-container{ padding: 40px 20px 30px; }
+    .f-contents{ grid-template-columns: 1fr; gap: 28px; }
+    .footer-divider{ margin: 0 20px; }
+}
+
+@media (max-width: 380px){
+    .container-strips{ grid-template-columns: repeat(2, 1fr); }
 }
